@@ -31,7 +31,7 @@ function Getintouch() {
         validationSchema: validationSchema,
         onSubmit: async (values) => {
             try {
-                await axios.post("http://localhost:8080/add-enq", values);
+                await axios.post("https://backendport-production-f5c1.up.railway.app/add-enq", values);
                 console.log(values.name);
                 alert(" Submitted ! Thank you! You will receive an email.");
                 resetForm();
