@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import image from "./images/IMG_2414-1.jpg";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+
 
 const Home = () => {
   const [currentTime, setCurrentTime] = useState(new Date().toLocaleTimeString());
@@ -52,7 +54,7 @@ const Home = () => {
   const quoteStyle = {
     fontSize: '18px',
     fontWeight: 'bold',
-    color: '#ff69b4',
+    color: 'white',
     animation: 'lighting 2s ease-in-out infinite',
     textShadow: '0 0 10px rgba(255, 105, 180, 0.6)',
     marginTop: '10px',
@@ -63,7 +65,7 @@ const Home = () => {
     flex: 1,
     padding: '20px',
     minWidth: '300px',
-    marginLeft:'-250px'
+    marginLeft:'-200px'
   };
 
   const clockStyle = {
@@ -182,7 +184,7 @@ const Home = () => {
         <div style={headerContentStyle}>
           <h1>Hi, I'm G. Mahesh</h1>
           <p>Java Full-Stack Developer | React - Spring Boot Enthusiast</p>
-          <div>
+          {/* <div>
             <Link to="/get-in-touch" style={buttonStyle}>
               Get in Touch
             </Link>
@@ -194,7 +196,52 @@ const Home = () => {
             >
               Visit GitHub
             </a>
-          </div>
+            <a href="https://www.linkedin.com/in/contactmaheshgavale"
+            target='_blank'
+            rel='noopener noreferrer'
+            style={buttonStyle}
+            >Linkedin</a>
+            <a href="https://x.com/Mahigavale"
+            target='_blank'
+            rel='noopener noreferrer'
+            style={buttonStyle}
+            >Twitter</a>
+          </div> */}
+          <div>
+  <Link to="/get-in-touch" style={buttonStyle}>
+    Get in Touch
+  </Link>
+
+  <a
+    href="https://github.com/Mahigavale"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={visitGitHubBtnStyle}
+  >
+    <FaGithub style={{ marginRight: "8px" }} />
+    Visit GitHub
+  </a>
+
+  <a
+    href="https://www.linkedin.com/in/contactmaheshgavale"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={buttonStyle}
+  >
+    <FaLinkedin style={{ marginRight: "8px", color: "#0a66c2" }} />
+    LinkedIn
+  </a>
+
+  <a
+    href="https://x.com/Mahigavale"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={buttonStyle}
+  >
+    <FaTwitter style={{ marginRight: "8px", color: "#1DA1F2" }} />
+    Twitter
+  </a>
+</div>
         </div>
         <div style={clockStyle}>{currentTime}</div>
         <div style={headerContactStyle}>
