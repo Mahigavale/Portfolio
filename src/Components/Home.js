@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import image from "./images/IMG_2414-1.jpg";
+import image from "./images/IMG_3900 2.jpg";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 
 const Home = () => {
+
+  const resumeUrl = "/Mahesh_Gavale_Resume.pdf";
   const [currentTime, setCurrentTime] = useState(new Date().toLocaleTimeString());
 
   useEffect(() => {
@@ -47,8 +49,9 @@ const Home = () => {
   const imageStyle = {
     width: '150px',
     height: '150px',
-    borderRadius: '50%',
+    borderRadius: '70%',
     objectFit: 'cover',
+  
   };
 
   const quoteStyle = {
@@ -302,7 +305,27 @@ const Home = () => {
           </ul>
         </div>
       </div>
-
+      <div style={{ textAlign: "center", margin: "2rem" }}>
+           
+            <a
+                href={resumeUrl}
+                download="Mahesh_Gavale_Cv.pdf" // File name for the downloaded file
+                style={{
+                    display: "inline-block",
+                    padding: "10px 20px",
+                    backgroundColor: "#007bff",
+                    color: "white",
+                    fontSize: "16px",
+                    fontWeight: "bold",
+                    textDecoration: "none",
+                    borderRadius: "5px",
+                    border: "none",
+                    cursor: "pointer",
+                }}
+            >
+                Download Resume
+            </a>
+        </div>
       <footer style={{ backgroundColor: '#162633', color: 'white', textAlign: 'center', padding: '20px 0', marginTop: 'auto' }}>
         <p>© G. Mahesh 2024. All rights reserved.</p>
       </footer>
